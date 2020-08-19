@@ -1,0 +1,103 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #1c3c35;
+    color: black;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: 'Alata', sans-serif; 
+    padding: 36px;
+    margin: 0px;
+  }
+.calculator {
+    display: grid;
+    height: 100%;
+    margin: 1rem auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+button{
+    font-weight: bolder;
+    font-size: 36px;
+}
+.input {
+    grid-row: 1 / 1;
+    grid-column: 1/ span 4;
+    background-color: aliceblue;
+    font-weight: bold;
+    font-size: 36px;
+}
+#butt7 {
+    grid-row: 2 / 2;
+    grid-column: 1 / 1;
+}
+#butt8 {
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
+}
+#butt9 {
+    grid-row: 2 / 2;
+    grid-column: 3 / 3;
+}
+#buttDiv {
+    grid-row: 2 / 2;
+    grid-column: 4 / 4;
+}
+#butt4 {
+    grid-row: 3 / 3;
+    grid-column: 1 / 1;
+}
+#butt5 {
+    grid-row: 3 / 3;
+    grid-column: 2 / 2;
+}
+#butt6 {
+    grid-row: 3 / 3;
+    grid-column: 3 / 3;
+}
+#buttMult {
+    grid-row: 3 / 3;
+    grid-column: 4 / 4;
+}
+#butt1 {
+    grid-row: 4 / 4;
+    grid-column: 1 / 1;
+}
+#butt2 {
+    grid-row: 4 / 4;
+    grid-column: 2 / 2;
+}
+#butt3 {
+    grid-row: 4 / 4;
+    grid-column: 3 / 3;
+}
+#buttSub {
+    grid-row: 4 / 4;
+    grid-column: 4 / 4;
+}
+#butt0 {
+    grid-row: 5 / 5;
+    grid-column: 1 / 1;
+}
+#buttFrac {
+    grid-row: 5 / 5;
+    grid-column: 2 / 2;
+}
+.buttClear {
+    grid-row: 5 / 5;
+    grid-column: 3 / 3;
+}
+#buttAdd {
+    grid-row: 5 / 5;
+    grid-column: 4 / 4;
+}
+.equal {
+    grid-row: 6 / 6;
+    grid-column: 1 / span 4;
+}
