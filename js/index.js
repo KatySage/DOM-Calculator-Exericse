@@ -20,12 +20,10 @@ numberButtons.forEach(function(element){
             inputArrayNum = []
             //adds the lastest pushed number into the array
             inputArrayNum.push(element.innerHTML)
-            console.log(inputArrayFull)
             inputScreen.innerText += element.innerHTML
     } else {        
         inputScreen.innerText += element.innerHTML
-        inputArrayNum.push(element.innerHTML)
-        console.log(inputArrayNum)}
+        inputArrayNum.push(element.innerHTML)}
 })     })
 // add click handlers to the calculation buttons
 const operButtons = document.querySelectorAll(".operator")
@@ -56,7 +54,6 @@ eqButton.addEventListener('click', (event) => {
         alert("You cannot end on an operator. Please enter a number after the operator.")
     } else {
     inputArrayFull.push(inputArrayNum.join(''));
-    console.log(inputArrayFull)
     //removes "" when doing repeated results
     const toRemove = [""];
     inputArrayFull = inputArrayFull.filter( (element) => !toRemove.includes(element) );
@@ -69,31 +66,23 @@ eqButton.addEventListener('click', (event) => {
     //multiplication
     while (inputArrayFull.indexOf("x") !== -1) {
         i = inputArrayFull.indexOf("x")
-        inputArrayFull.splice(i - 1, 3, inputArrayFull[i - 1] * inputArrayFull[i + 1]);
-        console.log(inputArrayFull)}
+        inputArrayFull.splice(i - 1, 3, inputArrayFull[i - 1] * inputArrayFull[i + 1]);}
     // division
     while (inputArrayFull.indexOf("/") !== -1) {
         i = inputArrayFull.indexOf("/")
-        inputArrayFull.splice(i - 1, 3, inputArrayFull[i - 1] / inputArrayFull[i + 1]);
-        console.log(inputArrayFull) }
+        inputArrayFull.splice(i - 1, 3, inputArrayFull[i - 1] / inputArrayFull[i + 1]); }
     // addition
     while (inputArrayFull.indexOf("+") !== -1) {
         i = inputArrayFull.indexOf("+")
         const addArrayString = []
         addArrayString.push(inputArrayFull[i-1], inputArrayFull[i+1])
-        console.log(addArrayString)
         var addArrayNum = addArrayString.map(Number);
-        console.log(addArrayNum)
         var sum = addArrayNum.reduce(function(a, b) {return a + b;}, 0);
-        console.log(sum)
-        inputArrayFull.splice(i - 1, 3, sum);
-        console.log(inputArrayFull) }
+        inputArrayFull.splice(i - 1, 3, sum);}
     //subtraction
     while (inputArrayFull.indexOf("-") !== -1) {
         i = inputArrayFull.indexOf("-")
-        inputArrayFull.splice(i - 1, 3, inputArrayFull[i - 1] - inputArrayFull[i + 1]);
-        console.log(inputArrayFull)
-    }
+        inputArrayFull.splice(i - 1, 3, inputArrayFull[i - 1] - inputArrayFull[i + 1]);}
     inputScreen.innerText = inputArrayFull.toString()
 } })
 //set up clear button
