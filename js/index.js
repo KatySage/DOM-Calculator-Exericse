@@ -59,7 +59,7 @@ eqButton.addEventListener('click', (event) => {
     console.log(inputArrayFull)
     //removes "" when doing repeated results
     const toRemove = [""];
-    inputArrayFull = inputArrayFull.filter( ( el ) => !toRemove.includes( el ) );
+    inputArrayFull = inputArrayFull.filter( (element) => !toRemove.includes(element) );
     //set num array to nothing
     inputArrayNum = []
     //set up operators array
