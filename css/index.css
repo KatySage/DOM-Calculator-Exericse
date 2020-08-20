@@ -1,7 +1,7 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
-    background-color: #1c3c35;
+    background: linear-gradient(to bottom, #9ee5ce 0%,#84c9b4 25%,#53b28f 54%,#003d31 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     color: black;
 }
   *, *:before, *:after {
@@ -25,6 +25,13 @@ button{
     font-weight: bolder;
     font-size: 36px;
     background-color: #3b8173;
+    border-radius: 12px;
+    border: 2px solid #80CEB3;
+    transition-duration: 0.4s;
+}
+button:hover {
+    background-color:  #80CEB3;
+    border: 2px solid #3b8173;
 }
 .input {
     grid-row: 1 / 1;
@@ -33,6 +40,7 @@ button{
     font-weight: bold;
     font-size: 5rem;
     overflow: hidden;
+    border-radius: 12px;
 
 
 }
