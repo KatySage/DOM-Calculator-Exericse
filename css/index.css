@@ -28,10 +28,14 @@ button{
     border-radius: 12px;
     border: 2px solid #80CEB3;
     transition-duration: 0.4s;
+    
 }
 button:hover {
     background-color:  #80CEB3;
     border: 2px solid #3b8173;
+}
+button:focus {
+    outline:none;
 }
 .input {
     grid-row: 1 / 1;
@@ -112,3 +116,7 @@ button:hover {
     grid-row: 6 / 6;
     grid-column: 1 / span 4;
 }
+/* #delete {
+    grid-row: 6 / 6;
+    grid-column: 1 / 1;
+} */
