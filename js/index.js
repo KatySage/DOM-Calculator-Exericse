@@ -57,6 +57,11 @@ eqButton.addEventListener('click', (event) => {
     } else {
     inputArrayFull.push(inputArrayNum.join(''));
     console.log(inputArrayFull)
+    //removes "" when doing repeated results
+    const toRemove = [""];
+    inputArrayFull = inputArrayFull.filter( ( el ) => !toRemove.includes( el ) );
+    //set num array to nothing
+    inputArrayNum = []
     //set up operators array
     const arrayOp =["+", "-", "x", "/"]
     //set up i variable
