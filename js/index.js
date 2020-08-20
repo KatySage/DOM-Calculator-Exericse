@@ -26,8 +26,7 @@ numberButtons.forEach(function(element){
         inputScreen.innerText += element.innerHTML
         inputArrayNum.push(element.innerHTML)
         console.log(inputArrayNum)}
-})    
-    })
+})     })
 // add click handlers to the calculation buttons
 const operButtons = document.querySelectorAll(".operator")
 // const inputArrayOperator = []
@@ -44,8 +43,6 @@ operButtons.forEach(function(element){
             alert("TYPE A NUMBER FIRST");
         } else {
             inputScreen.innerText += element.innerHTML;
-
-
         }
         })    
     })
@@ -68,28 +65,32 @@ eqButton.addEventListener('click', (event) => {
     while (inputArrayFull.indexOf("x") !== -1) {
         i = inputArrayFull.indexOf("x")
         inputArrayFull.splice(i - 1, 3, inputArrayFull[i - 1] * inputArrayFull[i + 1]);
-        console.log(inputArrayFull)
-    }
+        console.log(inputArrayFull)}
     // division
     while (inputArrayFull.indexOf("/") !== -1) {
         i = inputArrayFull.indexOf("/")
         inputArrayFull.splice(i - 1, 3, inputArrayFull[i - 1] / inputArrayFull[i + 1]);
-        console.log(inputArrayFull)
-    }
+        console.log(inputArrayFull) }
     // addition
     while (inputArrayFull.indexOf("+") !== -1) {
         i = inputArrayFull.indexOf("+")
-        inputArrayFull.splice(i - 1, 3, inputArrayFull[i - 1] + inputArrayFull[i + 1]);
-        console.log(inputArrayFull)
-    }
+        const addArrayString = []
+        addArrayString.push(inputArrayFull[i-1], inputArrayFull[i+1])
+        console.log(addArrayString)
+        var addArrayNum = addArrayString.map(Number);
+        console.log(addArrayNum)
+        var sum = addArrayNum.reduce(function(a, b) {return a + b;}, 0);
+        console.log(sum)
+        inputArrayFull.splice(i - 1, 3, sum);
+        console.log(inputArrayFull) }
+    //subtraction
     while (inputArrayFull.indexOf("-") !== -1) {
         i = inputArrayFull.indexOf("-")
         inputArrayFull.splice(i - 1, 3, inputArrayFull[i - 1] - inputArrayFull[i + 1]);
         console.log(inputArrayFull)
     }
     inputScreen.innerText = inputArrayFull.toString()
-}
-})
+} })
 //set up clear button
 const clearButton = document.getElementById('clear')
 clearButton.addEventListener('click', function (event) {
